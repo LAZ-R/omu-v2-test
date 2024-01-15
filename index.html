@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr" id="html">
+  <head>
+    <meta charset="utf-8">
+    <title id="title"></title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./medias/app-maskable-icons/app_icon_152.png">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <meta name="theme-color" content="#000000"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="" id="appleTitle">
+    <meta name="msapplication-TileImage" content="./medias/app-maskable-icons/app_icon_144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  </head>
+
+  <body id="body">
+
+    <header id="header" class="header">
+      <img
+          src="./medias/images/logo_on_dark.svg" 
+          alt="Logo d'Opale Makeup', représentant un rond marron dans lequel se trouvent des formes géométriques de teintes de marron différentes qui forment un pinceau à poudre à tête ronde vu de profil et qui représentent également les initiales de l'entreprise (OMU)" 
+      />
+  </header>
+
+    <div id="main" class="main">
+
+      <div class="main-intro-area">
+        <span class="name-intro">MATTHIEU DUQUENOY</span>
+        <span class="pro-intro">MAQUILLEUR PROFESSIONNEL</span>
+        <span class="sub-intro">EN DÉPLACEMENT SUR TOUTE LA CÔTE D'OPALE</span>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- ------------------------- MAQUILLAGES -------------------------- -->
+      <!-- ================================================================ -->
+
+      <div id="maquillages" class="prestation-group-container closed">
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------------- HEADER --------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <button id="maquillages-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('maquillages')">
+          <div class="group-name-container">
+            <span>Maquillages</span>
+            <img id="maquillagesCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- ------------------- Maquillage jour natuel ------------------- -->
+
+        <div id="maquillageJourNaturel" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('maquillageJourNaturel')">
+            <div class="prestation-header-text">
+              <span>Maquillage jour naturel</span> <span>18€</span>
+            </div>
+            <img id="maquillageJourNaturelCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+
+          <div class="description-container"><span>Teint, yeux, lèvres</span></div>
+
+          <div class="images-container">
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+          </div>
+        </div>
+
+        <!-- ---------------- Maquillage jour sophistiqué ----------------- -->
+
+        <div id="maquillageJourSophistique" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('maquillageJourSophistique')">
+            <div class="prestation-header-text">
+              <span>Maquillage jour sophistiqué</span><span>23€</span>
+            </div>
+            <img id="maquillageJourSophistiqueCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container"><span>Teint, sourcils, yeux, lèvres</span></div>
+
+          <div class="images-container">
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+          </div>
+        </div>
+
+        <!-- --------------------- Maquillage soirée ---------------------- -->
+
+        <div id="maquillageSoiree" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('maquillageSoiree')">
+            <div class="prestation-header-text">
+              <span>Maquillage soirée</span><span>33€</span>
+            </div>
+            <img id="maquillageSoireeCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Teint, contouring, sourcils, yeux, lèvres</span>
+            <span>+ 5€ pour faux-cils (implants ou franges)</span>
+          </div>
+
+          <div class="images-container">
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- --------------------------- MARIAGES --------------------------- -->
+      <!-- ================================================================ -->
+
+      <div id="mariages" class="prestation-group-container closed">
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------------- HEADER --------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <button id="mariages-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('mariages')">
+          <div class="group-name-container">
+            <span>Mariages</span>
+            <img id="mariagesCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- ----------------------- Mariée natuel ------------------------ -->
+
+        <div id="marieeNaturel" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeNaturel')">
+            <div class="prestation-header-text">
+              <span>Maquillage mariée naturel</span><span>75€</span>
+            </div>
+            <img id="marieeNaturelCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container"><span>Teint, yeux, lèvres</span></div>
+
+          <div class="images-container">
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- --------------------------- ENFANTS ---------------------------- -->
+      <!-- ================================================================ -->
+
+      <div id="enfants" class="prestation-group-container closed">
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------------- HEADER --------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <button id="enfants-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('enfants')">
+          <div class="group-name-container">
+            <span>Enfants</span>
+            <img id="enfantsCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div>content</div>
+
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- ---------------------------- COURS ----------------------------- -->
+      <!-- ================================================================ -->
+
+      <div id="cours" class="prestation-group-container closed">
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------------- HEADER --------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <button id="cours-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('cours')">
+          <div class="group-name-container">
+            <span>Cours</span>
+            <img id="coursCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div>content</div>
+
+      </div>
+
+      <div class="ghost-footer"></div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <a id="phoneButton" class="footer-button" href="tel:+33667709602"><img src="medias/images/font-awsome/phone.svg" /></a>
+      <a id="instagramButton" class="footer-button" href="https://www.instagram.com/opale_make_up/?hl=fr"></a>
+      <a id="facebookButton" class="footer-button" href="https://www.facebook.com/profile.php?id=100090012348692"></a>
+      <a id="emailButton" class="footer-button" href="mailto:contact.opalemakeup@gmail.com"><img src="medias/images/font-awsome/mail.svg" /></a>
+    </footer>
+
+    <script src="main.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    
+  </body>
+</html>
