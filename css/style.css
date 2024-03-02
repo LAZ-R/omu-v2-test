@@ -388,6 +388,7 @@ input:checked + .slider:before {
             align-items: center;
             width: 100%;
             padding-right: var(--horizontal-padding);
+            text-align: start;
 
             & span:first-of-type {
                 font-family: 'rakesly-extra-light';
@@ -434,11 +435,29 @@ input:checked + .slider:before {
         overflow-x: scroll;
 
         & button {
+            position: relative;
             display: flex;
             min-height: calc(var(--presta-height) - 60px - 4px - 44px - 10px);
             min-width: 40%;
             background-size: cover;
             background-position: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                display: flex;
+                width: 15%;
+                height: 50%;
+                
+                background-image: url(../medias/images/font-awsome/magnifying-glass-solid.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: bottom;
+                filter: invert();
+                opacity: .5;
+            }
         }
     }
 }
@@ -454,35 +473,139 @@ input:checked + .slider:before {
     background-color: transparent;
 }
 
-.footer-button {
-    position: absolute;
-    --button-size : calc((100dvw - (var(--horizontal-padding) * 5)) / 4);
-    top: calc(0px - (var(--button-size) / 2));
-    display: flex;
+.photo-viewer-container {
+    position: fixed;
+    display: none;
     justify-content: center;
     align-items: center;
-    min-width: var(--button-size); width: var(--button-size); max-width: var(--button-size);
-    min-height: var(--button-size); height: var(--button-size); max-height: var(--button-size);
-    border-radius: 500px;
-    border: 3px solid white;
-    background-color: var(--palette-3);
-    box-shadow: var(--box-shadow-strong);
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    z-index: 800;
+    opacity: 0;
+    transition: opacity .2s linear;
 
-    & img {
-        height: calc(var(--button-size) / 1.75);
-        filter: var(--filter-white);
+    & .photo-viewer-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000b2;
+        height: 100%;
+        width: 100%;
     }
 
-    &#phoneButton { left: var(--horizontal-padding); }
-    &#instagramButton { left: calc(var(--horizontal-padding) + var(--button-size) + var(--horizontal-padding)); 
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png');
-        /* background-image: url('../medias/images/insta-bg.png'); */
-        background-size: cover; }
-    &#facebookButton { right: calc(var(--horizontal-padding) + var(--button-size) + var(--horizontal-padding));
-        background-image: url('https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png');
-        background-size: cover; }
-    &#emailButton { right: var(--horizontal-padding); }
+    & .photo-viewer {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        left: var(--horizontal-padding);
+        width: calc(100% - (2 * var(--horizontal-padding)));
+        height: fit-content;
+        box-shadow: var(--box-shadow);
+        /* aspect-ratio: 1 / 1.25; */
+        & > img  {
+            width: 100%;
+        }
+
+        & button {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            padding: 0;
+            background-color: transparent;
+
+            & img {
+                filter: invert();
+                opacity: .5;
+                width: 40px;
+            }
+
+            &:first-of-type {
+                left: 0;
+                justify-content: flex-start;
+
+                & img {
+                    transform: rotate(90deg);
+                }
+            }
+
+            &:last-of-type {
+                right: 0;
+                justify-content: flex-end;
+
+                & img {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+
+    & > button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        padding: var(--horizontal-padding);
+        background-color: transparent;
+
+        & img {
+            transform: rotate(45deg);
+            filter: invert();
+            opacity: .5;
+            width: 30px;
+        }
+    }
 }
+
+.buttons-container {
+    --button-size : calc((100dvw - (var(--horizontal-padding) * 5)) / 5);
+
+    position: absolute;
+    top: calc(0px - (var(--button-size) / 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--button-size);
+    padding: 0 var(--horizontal-padding);
+
+    & .footer-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: var(--button-size); width: var(--button-size); max-width: var(--button-size);
+        min-height: var(--button-size); height: var(--button-size); max-height: var(--button-size);
+        border-radius: 500px;
+        /* border: 3px solid white; */
+        background-color: var(--palette-3);
+        box-shadow: var(--box-shadow-strong);
+    
+        & img {
+            height: calc(var(--button-size) / 1.75);
+            filter: var(--filter-white);
+        }
+    
+        /* &#phoneButton { } */
+        &#instagramButton { 
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png');
+            background-size: cover;
+        }
+        &#facebookButton { 
+            background-image: url('https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png');
+            background-size: cover;
+        }
+        /* &#emailButton { } */
+    }
+}
+
 
 /* ############################################################################
 -------------------------------- MEDIA QUERIES --------------------------------

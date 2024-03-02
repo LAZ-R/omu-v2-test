@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./medias/app-maskable-icons/app_icon_152.png">
-    <meta name="description" content="...">
+    <meta name="description" content="Prestations de maquillage en déplacement sur la Côte d'Opale (Boulogne-sur-Mer, Calais, Dunkerque, Guînes) : Maquillage Jour, Soirée, Mariage, Enfants, et cours">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
     <meta name="theme-color" content="#000000"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,11 +22,12 @@
   <body id="body">
 
     <header id="header" class="header">
-      <img
-          src="./medias/images/logo_on_dark.svg" 
-          alt="Logo d'Opale Makeup', représentant un rond marron dans lequel se trouvent des formes géométriques de teintes de marron différentes qui forment un pinceau à poudre à tête ronde vu de profil et qui représentent également les initiales de l'entreprise (OMU)" 
-      />
-  </header>
+      <img src="./medias/images/logo_on_dark.svg" 
+          alt="Logo d'Opale Makeup', 
+          représentant un rond marron dans lequel se trouvent des formes géométriques 
+          de teintes de marron différentes qui forment un pinceau à poudre à tête ronde 
+          vu de profil et qui représentent également les initiales de l'entreprise (OMU)" />
+    </header>
 
     <div id="main" class="main">
 
@@ -36,15 +37,11 @@
         <span class="sub-intro">EN DÉPLACEMENT SUR TOUTE LA CÔTE D'OPALE</span>
       </div>
 
-      <!-- ================================================================ -->
-      <!-- ------------------------- MAQUILLAGES -------------------------- -->
-      <!-- ================================================================ -->
+      <!-- ==================================================================================== -->
+      <!-- ----------------------------------- MAQUILLAGES ------------------------------------ -->
+      <!-- ==================================================================================== -->
 
       <div id="maquillages" class="prestation-group-container closed">
-
-        <!-- -------------------------------------------------------------- -->
-        <!-- --------------------------- HEADER --------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <button id="maquillages-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('maquillages')">
           <div class="group-name-container">
@@ -54,10 +51,8 @@
         </button>
 
         <!-- -------------------------------------------------------------- -->
-        <!-- ------------------------ PRESTATIONS ------------------------- -->
-        <!-- -------------------------------------------------------------- -->
-
         <!-- ------------------- Maquillage jour natuel ------------------- -->
+        <!-- -------------------------------------------------------------- -->
 
         <div id="maquillageJourNaturel" class="prestation-container closed">
           <button class="prestation-header" onclick="onPrestationClick('maquillageJourNaturel')">
@@ -72,14 +67,16 @@
           <div class="description-container"><span>Teint, yeux, lèvres</span></div>
 
           <div class="images-container">
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button onclick="onPictureClick(0, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour.webp');"></button>
+            <button onclick="onPictureClick(0, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-2.webp');"></button>
+            <button onclick="onPictureClick(0, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-3.webp');"></button>
+            <button onclick="onPictureClick(0, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-4.webp');"></button>
           </div>
         </div>
 
+        <!-- -------------------------------------------------------------- -->
         <!-- ---------------- Maquillage jour sophistiqué ----------------- -->
+        <!-- -------------------------------------------------------------- -->
 
         <div id="maquillageJourSophistique" class="prestation-container closed">
           <button class="prestation-header" onclick="onPrestationClick('maquillageJourSophistique')">
@@ -94,14 +91,16 @@
           <div class="description-container"><span>Teint, sourcils, yeux, lèvres</span></div>
 
           <div class="images-container">
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button onclick="onPictureClick(1, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-sophistique.webp');"></button>
+            <button onclick="onPictureClick(1, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-sophistique-2.webp');"></button>
+            <button onclick="onPictureClick(1, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-sophistique-3.webp');"></button>
+            <button onclick="onPictureClick(1, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/jour-sophistique-4.webp');"></button>
           </div>
         </div>
 
+        <!-- -------------------------------------------------------------- -->
         <!-- --------------------- Maquillage soirée ---------------------- -->
+        <!-- -------------------------------------------------------------- -->
 
         <div id="maquillageSoiree" class="prestation-container closed">
           <button class="prestation-header" onclick="onPrestationClick('maquillageSoiree')">
@@ -119,24 +118,20 @@
           </div>
 
           <div class="images-container">
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button onclick="onPictureClick(2, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-2.webp');"></button>
+            <button onclick="onPictureClick(2, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree.webp');"></button>
+            <button onclick="onPictureClick(2, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-3.webp');"></button>
+            <button onclick="onPictureClick(2, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-4.webp');"></button>
           </div>
         </div>
 
       </div>
 
-      <!-- ================================================================ -->
-      <!-- --------------------------- MARIAGES --------------------------- -->
-      <!-- ================================================================ -->
+      <!-- ==================================================================================== -->
+      <!-- ------------------------------------- MARIAGES ------------------------------------- -->
+      <!-- ==================================================================================== -->
 
       <div id="mariages" class="prestation-group-container closed">
-
-        <!-- -------------------------------------------------------------- -->
-        <!-- --------------------------- HEADER --------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <button id="mariages-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('mariages')">
           <div class="group-name-container">
@@ -146,10 +141,8 @@
         </button>
 
         <!-- -------------------------------------------------------------- -->
-        <!-- ------------------------ PRESTATIONS ------------------------- -->
-        <!-- -------------------------------------------------------------- -->
-
         <!-- ----------------------- Mariée natuel ------------------------ -->
+        <!-- -------------------------------------------------------------- -->
 
         <div id="marieeNaturel" class="prestation-container closed">
           <button class="prestation-header" onclick="onPrestationClick('marieeNaturel')">
@@ -164,24 +157,204 @@
           <div class="description-container"><span>Teint, yeux, lèvres</span></div>
 
           <div class="images-container">
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
-            <button style="background-image: url('./medias/images/maquillages.jpg');"></button>
+            <button onclick="onPictureClick(3, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel.webp');"></button>
+            <button onclick="onPictureClick(3, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-2.webp');"></button>
+            <button onclick="onPictureClick(3, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-3.webp');"></button>
+            <button onclick="onPictureClick(3, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-4.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Mariée sophistiqué --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="marieeSophistique" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeSophistique')">
+            <div class="prestation-header-text">
+              <span>Maquillage mariée sophistiqué</span><span>95€</span>
+            </div>
+            <img id="marieeSophistiqueCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Teint, contouring, sourcils, yeux, faux-cils (implants ou franges), lèvres</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(4, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique.webp');"></button>
+            <button onclick="onPictureClick(4, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-2.webp');"></button>
+            <button onclick="onPictureClick(4, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-3.webp');"></button>
+            <button onclick="onPictureClick(4, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-4.webp');"></button>
+            <button onclick="onPictureClick(4, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-5.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------- Mariée Naturel Lâchée -------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="marieeNaturelLache" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeNaturelLache')">
+            <div class="prestation-header-text">
+              <span>Forfait mariée<br>(naturel + lâchée)</span><span>104€</span>
+            </div>
+            <img id="marieeNaturelLacheCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage naturel / coiffure lâchée</span>
+            <span>+ 5€ si déco cheveux</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(5, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches.webp');"></button>
+            <button onclick="onPictureClick(5, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-3.webp');"></button>
+            <button onclick="onPictureClick(5, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-5.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------ Mariée Naturel Attachée ------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="marieeNaturelAttache" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeNaturelAttache')">
+            <div class="prestation-header-text">
+              <span>Forfait mariée<br>(naturel + attachée)</span><span>114€</span>
+            </div>
+            <img id="marieeNaturelAttacheCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage naturel / coiffure attachée</span>
+            <span>+ 5€ si déco cheveux</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(6, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches.webp');"></button>
+            <button onclick="onPictureClick(6, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-5.webp');"></button>
+            <button onclick="onPictureClick(6, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-3.webp');"></button>
+            <button onclick="onPictureClick(6, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-7.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ----------------- Mariée Sophistiqué Lachée ------------------ -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="marieeSophistiqueLache" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeSophistiqueLache')">
+            <div class="prestation-header-text">
+              <span>Forfait mariée<br>(sophistiqué + lâchée)</span><span>124€</span>
+            </div>
+            <img id="marieeSophistiqueLacheCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage sophistiqué / coiffure lâchée</span>
+            <span>+ 5€ si déco cheveux</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(7, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-2.webp');"></button>
+            <button onclick="onPictureClick(7, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-4.webp');"></button>
+            <button onclick="onPictureClick(7, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-6.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- ------------------ Mariée Sophistiqué Attachée ------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="marieeSophistiqueAttache" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('marieeSophistiqueAttache')">
+            <div class="prestation-header-text">
+              <span>Forfait mariée<br>(sophistiqué + attachée)</span><span>134€</span>
+            </div>
+            <img id="marieeSophistiqueAttacheCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage sophistiqué / coiffure attachée</span>
+            <span>+ 5€ si déco cheveux</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(8, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-6.webp');"></button>
+            <button onclick="onPictureClick(8, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-4.webp');"></button>
+            <button onclick="onPictureClick(8, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-2.webp');"></button>
+            <button onclick="onPictureClick(8, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-8.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Maquillage Invitée --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="invitee" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('invitee')">
+            <div class="prestation-header-text">
+              <span>Maquillage naturel</span><span>29€</span>
+            </div>
+            <img id="inviteeCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Teint, yeux, lèvres</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(9, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-1.webp');"></button>
+            <button onclick="onPictureClick(9, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-2.webp');"></button>
+            <button onclick="onPictureClick(9, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-3.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Forfait Invitée --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="forfaitInvitee" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('forfaitInvitee')">
+            <div class="prestation-header-text">
+              <span>Forfait invitée</span><span>49€</span>
+            </div>
+            <img id="forfaitInviteeCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage naturel / chignon classique "mariage"</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(10, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-1.webp');"></button>
+            <button onclick="onPictureClick(10, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-2.webp');"></button>
           </div>
         </div>
 
       </div>
 
-      <!-- ================================================================ -->
-      <!-- --------------------------- ENFANTS ---------------------------- -->
-      <!-- ================================================================ -->
+      <!-- ==================================================================================== -->
+      <!-- ------------------------------------- ENFANTS -------------------------------------- -->
+      <!-- ==================================================================================== -->
 
       <div id="enfants" class="prestation-group-container closed">
 
-        <!-- -------------------------------------------------------------- -->
         <!-- --------------------------- HEADER --------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <button id="enfants-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('enfants')">
           <div class="group-name-container">
@@ -190,23 +363,19 @@
           </div>
         </button>
 
-        <!-- -------------------------------------------------------------- -->
         <!-- ------------------------ PRESTATIONS ------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <div>content</div>
 
       </div>
 
-      <!-- ================================================================ -->
-      <!-- ---------------------------- COURS ----------------------------- -->
-      <!-- ================================================================ -->
+      <!-- ==================================================================================== -->
+      <!-- -------------------------------------- COURS --------------------------------------- -->
+      <!-- ==================================================================================== -->
 
       <div id="cours" class="prestation-group-container closed">
 
-        <!-- -------------------------------------------------------------- -->
         <!-- --------------------------- HEADER --------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <button id="cours-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('cours')">
           <div class="group-name-container">
@@ -215,9 +384,7 @@
           </div>
         </button>
 
-        <!-- -------------------------------------------------------------- -->
         <!-- ------------------------ PRESTATIONS ------------------------- -->
-        <!-- -------------------------------------------------------------- -->
 
         <div>content</div>
 
@@ -225,13 +392,19 @@
 
       <div class="ghost-footer"></div>
     </div>
-
+    
+    
+  
     <footer id="footer" class="footer">
-      <a id="phoneButton" class="footer-button" href="tel:+33667709602"><img src="medias/images/font-awsome/phone.svg" /></a>
-      <a id="instagramButton" class="footer-button" href="https://www.instagram.com/opale_make_up/?hl=fr"></a>
-      <a id="facebookButton" class="footer-button" href="https://www.facebook.com/profile.php?id=100090012348692"></a>
-      <a id="emailButton" class="footer-button" href="mailto:contact.opalemakeup@gmail.com"><img src="medias/images/font-awsome/mail.svg" /></a>
+      <div class="buttons-container">
+        <a id="phoneButton" class="footer-button" href="tel:+33667709602"><img src="medias/images/font-awsome/phone.svg" /></a>
+        <a id="instagramButton" class="footer-button" href="https://www.instagram.com/opale_make_up/?hl=fr"></a>
+        <a id="facebookButton" class="footer-button" href="https://www.facebook.com/profile.php?id=100090012348692"></a>
+        <a id="emailButton" class="footer-button" href="mailto:contact.opalemakeup@gmail.com"><img src="medias/images/font-awsome/mail.svg" /></a>
+      </div>
     </footer>
+    
+    <div id="photoViewerContainer" class="photo-viewer-container"></div>
 
     <script src="main.js"></script>
     <script type="module" src="./js/app.js"></script>
