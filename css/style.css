@@ -9,7 +9,7 @@
 
 
 :root {
-    --magic-height: calc((82dvh - 7dvh) / 5);
+    --magic-height: calc((82dvh - 7dvh) / 7);
     --border-radius: 500px;
     --gap: 5px;
     --presta-height: 250px;
@@ -42,8 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100dvh; /* fallback for Js load */
-    height: var(--doc-height);
+    min-height: 100dvh; height: 100dvh; max-height: 100dvh;
     padding: 0;
     margin: 0;
     background-color: var(--html-background-color);
@@ -264,35 +263,72 @@ input:checked + .slider:before {
 .main-intro-area {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    min-height: var(--magic-height); height: var(--magic-height); max-height: var(--magic-height);
+    min-height: var(--magic-height); height: var(--magic-height);
     width: 100%;
     background-color: var(--gray-90);
-    padding: 0 var(--horizontal-padding);
+    padding: 0;
     color: var(--palette-1);
     text-align: center;
+    transition: min-height .2s linear, height .2s linear;
+    overflow: hidden;
+    /* gap: 5px; */
 
-    & .name-intro {
-        font-size: 20px;
-        font-family: 'rakesly-ultra-light';
-        letter-spacing: 2px;
+    & .main-intro-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: var(--magic-height); height: var(--magic-height); max-height: var(--magic-height);
+        width: 100%;
+        background-color: var(--gray-90);
+        padding: 0 var(--horizontal-padding);
+        color: var(--palette-1);
+        text-align: center;
+
+        & .name-intro {
+            font-size: 18px;
+            font-family: 'rakesly-ultra-light';
+            letter-spacing: 2px;
+            color: white;
+        }
+    
+        & .pro-intro {
+            font-size: 22px;
+            font-family: 'rakesly-extra-light';
+            letter-spacing: 2px;
+            margin-bottom: 2px;
+        }
+    
+        & .sub-intro {
+            font-size: 12px;
+            font-family: 'rakesly-ultra-light';
+            letter-spacing: 2px;
+            color: white;
+        }
+    }
+
+    & .main-intro-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(2 * var(--magic-height)); height: calc(2 * var(--magic-height)); max-height: calc(2 * var(--magic-height));
+        width: 100%;
+        background-color: var(--gray-90);
+        padding: 0 var(--horizontal-padding);
         color: white;
+        text-align: center;
+
+        & .main-intro {
+            font-weight: 100;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
     }
 
-    & .pro-intro {
-        font-size: 25px;
-        font-family: 'rakesly-extra-light';
-        letter-spacing: 2px;
-        margin: 5px 0 10px 0;
-    }
-
-    & .sub-intro {
-        font-size: 14px;
-        font-family: 'rakesly-ultra-light';
-        letter-spacing: 2px;
-        color: white;
-    }
+    
 
 }
 
@@ -324,6 +360,8 @@ input:checked + .slider:before {
 
         &#maquillages-bloc-header { background-image: url("../medias/images/maquillages.jpg"); background-position: center; background-size: cover; }
         &#mariages-bloc-header { background-image: url("../medias/images/mariages.jpg"); background-position: center; background-size: cover; }
+        &#mains-bloc-header { background-image: url("https://orelka.com/cdn/shop/products/vernis-soin-2-en-1-prune-Maia-OrelKa1_2048x.jpg?v=1697550188"); background-position: center; background-size: cover; }
+        &#epilation-bloc-header { background-image: url("https://img.passeportsante.net/1200x675/2022-06-07/shutterstock-1795300762.webp"); background-position: center; background-size: cover; }
         &#enfants-bloc-header { background-image: url("../medias/images/enfants.jpg"); background-position: center; background-size: cover; }
         &#cours-bloc-header { background-image: url("../medias/images/cours.jpg"); background-position: center; background-size: cover; }
 
@@ -339,13 +377,13 @@ input:checked + .slider:before {
             & span {
                 color: white;
                 font-family: 'rakesly-extra-light';
-                font-size: 35px;
-                letter-spacing: 8px;
+                font-size: 30px;
+                letter-spacing: 7px;
                 text-transform: uppercase;
             }
 
             & img {
-                width: 40px;
+                width: 30px;
                 filter: var(--filter-white);
                 transition: transform .2s linear;
             }
@@ -390,13 +428,18 @@ input:checked + .slider:before {
             padding-right: var(--horizontal-padding);
             text-align: start;
 
-            & span:first-of-type {
+            & > span:first-of-type {
                 font-family: 'rakesly-extra-light';
                 letter-spacing: 1px;
                 color: var(--palette-1);
             }
-            & span:last-of-type {
+            & > span:last-of-type {
+                text-align: end;
                 color: white;
+
+                & > span {
+                    font-size: 12px;
+                }
             }
         }
 

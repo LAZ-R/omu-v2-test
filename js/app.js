@@ -1,18 +1,24 @@
-import { setDocumentHeight, setHTMLTitle } from "./utils/utils.js";
+import { setHTMLTitle } from "./utils/utils.js";
 
 /* ############################################################################
 --------------------------------- CONSTANTES ---------------------------------
 ############################################################################ */
-let maquillagesClosed = 3;
+let maquillagesClosed = 4;
 let maquillagesOpened = 0;
 
 let mariagesClosed = 8;
 let mariagesOpened = 0;
 
-let enfantsClosed = 3;
+let mainsClosed = 3;
+let mainsOpened = 0;
+
+let epilationClosed = 3;
+let epilationOpened = 0;
+
+let enfantsClosed = 2;
 let enfantsOpened = 0;
 
-let coursClosed = 3;
+let coursClosed = 6;
 let coursOpened = 0;
 
 // ----------------------------------------------------------------------------
@@ -27,52 +33,66 @@ const PRESTATIONS_PICTURES = [
   [ 'jour-sophistique', 'jour-sophistique-2', 'jour-sophistique-3', 'jour-sophistique-4' ],
   
   //  2 - soiree
-  [ 'soiree-2', 'soiree', 'soiree-3', 'soiree-4' ],
+  [ 'soiree-2', 'soiree', 'soiree-3', 'soiree-4', 'soiree-5' ],
+
+  //  3 - evenementiel
+  ['evenementiel', 'evenementiel-2', 'evenementiel-3', 'evenementiel-4', 'evenementiel-5', 'evenementiel-6', 'evenementiel-7', 'evenementiel-8', 'evenementiel-9'],
 
   // Mariages ---------------------------------------------
 
-  //  3 - marieeNaturel
+  //  4 - marieeNaturel
   ['mariee-naturel', 'mariee-naturel-2', 'mariee-naturel-3', 'mariee-naturel-4'],
   
-  //  4 - marieeSophistique
+  //  5 - marieeSophistique
   ['mariage-sophistique', 'mariage-sophistique-2', 'mariage-sophistique-3', 'mariage-sophistique-4','mariage-sophistique-5'],
   
-  //  5 - marieeNaturelLache
+  //  6 - marieeNaturelLache
   ['laches', 'laches-3', 'laches-5'],
   
-  //  6 - marieeNaturelAttache
-  ['attaches', 'attaches-5', 'attaches-3', 'attaches-7'],
+  //  7 - marieeNaturelAttache
+  ['attaches', 'attaches-5', 'attaches-3', 'attaches-7', 'attaches-9'],
   
-  //  7 - marieeSophistiqueLache
+  //  8 - marieeSophistiqueLache
   ['laches-2', 'laches-4', 'laches-6'],
   
-  //  8 - marieeSophistiqueAttache
-  ['attaches-6', 'attaches-4', 'attaches-2', 'attaches-8'],
+  //  9 - marieeSophistiqueAttache
+  ['attaches-6', 'attaches-4', 'attaches-2', 'attaches-8', 'attaches-10'],
   
-  //  9 - invitee
+  // 10 - invitee
   ['maquillage-invites-1', 'maquillage-invites-2', 'maquillage-invites-3'],
   
-  // 10 - forfaitInvitee
-  ['coiffure-invites-1', 'coiffure-invites-2'],
+  // 11 - forfaitInvitee
+  ['coiffure-invites-1', 'coiffure-invites-2', 'coiffure-invites-3', 'coiffure-invites-4', 'coiffure-invites-5'],
 
+  // Mains ------------------------------------------------
+
+  // XX - Presta 1
+  //['coiffure-invites-1', 'coiffure-invites-2', 'coiffure-invites-3', 'coiffure-invites-4', 'coiffure-invites-5'],
+  
+  // Epilation --------------------------------------------
+
+  // XX - Presta 1
+  //['coiffure-invites-1', 'coiffure-invites-2', 'coiffure-invites-3', 'coiffure-invites-4', 'coiffure-invites-5'],
+  
   // Enfants ----------------------------------------------
 
-  // XX - 
+  // 12 - enfantsParticuliers
   ['enfants', 'enfants-2', 'enfants-3', 'enfants-4', 'enfants-5', 'enfants-6', 'enfants-7', 'enfants-8'],
-  
-  // XX - 
-  ['evenementiel', 'evenementiel-2', 'evenementiel-3'],
 
+  // 13 - enfantsEntreprise
+  ['enfants-9', 'enfants-10', 'enfants-11', 'enfants-12', 'enfants-13', 'enfants-14', 'enfants-15', 'enfants-16', 'enfants-17'],
+  
+  
   // Cours ------------------------------------------------
 
-  // XX - individuelJour
-  ['cours1', 'cours1', 'cours1', 'cours1'],
+  // XX - coursMaquilageJour
+  /* ['cours1', 'cours1', 'cours1', 'cours1'],
   
   // XX - individuelSoiree
   ['cours2', 'cours2', 'cours2', 'cours2'],
   
   // XX - collectif
-  ['cours3', 'cours3', 'cours3', 'cours3'],
+  ['cours3', 'cours3', 'cours3', 'cours3'], */
 ]
 
 /* ############################################################################
@@ -80,6 +100,21 @@ const PRESTATIONS_PICTURES = [
 ############################################################################ */
 
 // INTERACTIONS UTILISATEUR -------------------------------
+
+const onMainIntroClick = () => {
+  const bloc = document.getElementById('mainIntro');
+
+  if (bloc.classList.contains('closed')) {
+    bloc.classList.replace('closed', 'opened');
+    bloc.style.minHeight = 'calc(3 * var(--magic-height))';
+    bloc.style.height = 'calc(3 * var(--magic-height))';
+  } else {
+    bloc.classList.replace('opened', 'closed');
+    bloc.style.minHeight = 'var(--magic-height)';
+    bloc.style.height = 'var(--magic-height)';
+  }
+}
+window.onMainIntroClick = onMainIntroClick;
 
 const onPrestationGroupClick = (blocName) => {
   
@@ -104,6 +139,12 @@ const onPrestationGroupClick = (blocName) => {
       break;
     case 'mariages':
       setBlocState(bloc,mariagesOpened, mariagesClosed, 'mariagesCaret');
+      break;
+    case 'mains':
+      setBlocState(bloc,mainsOpened, mainsClosed, 'mainsCaret');
+      break;
+    case 'epilation':
+      setBlocState(bloc,epilationOpened, epilationClosed, 'epilationCaret');
       break;
     case 'enfants':
       setBlocState(bloc,enfantsOpened, enfantsClosed, 'enfantsCaret');
@@ -155,6 +196,36 @@ const onPrestationClick = (blocName) => {
             mariagesClosed);
           break;
 
+        case 'mains':
+          if (bloc.classList.contains('closed')) { 
+            bloc.classList.replace('closed', 'opened');
+            mainsOpened += 1; mainsClosed -= 1;
+            caret.style.transform = 'rotate(180deg)';
+          } else { 
+            bloc.classList.replace('opened', 'closed'); 
+            mainsOpened -= 1; mainsClosed += 1;
+            caret.style.transform = 'rotate(0deg)';
+          }
+          setPrestationGroupBlocHeight(
+            document.getElementById(parentBlocName), 
+            mainsOpened, 
+            mainsClosed);
+          break;
+        case 'epilation':
+          if (bloc.classList.contains('closed')) { 
+            bloc.classList.replace('closed', 'opened');
+            epilationOpened += 1; epilationClosed -= 1;
+            caret.style.transform = 'rotate(180deg)';
+          } else { 
+            bloc.classList.replace('opened', 'closed'); 
+            epilationOpened -= 1; epilationClosed += 1;
+            caret.style.transform = 'rotate(0deg)';
+          }
+          setPrestationGroupBlocHeight(
+            document.getElementById(parentBlocName), 
+            epilationOpened, 
+            epilationClosed);
+          break;
         case 'enfants':
           if (bloc.classList.contains('closed')) { 
             bloc.classList.replace('closed', 'opened');
@@ -204,6 +275,9 @@ const onPrestationClick = (blocName) => {
     case 'maquillageSoiree':
       setBlocState(bloc, 'maquillages', `${blocName}Caret`);
       break;
+    case 'evenementiel':
+      setBlocState(bloc, 'maquillages', `${blocName}Caret`);
+      break;
 
     // MARIAGES
     case 'marieeNaturel':
@@ -229,6 +303,44 @@ const onPrestationClick = (blocName) => {
       break;
     case 'forfaitInvitee':
       setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      break;
+    
+    // MAINS
+    case 'mains1':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    
+    // EPILATION
+    case 'epilation1':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    
+    // ENFANTS
+    case 'enfantsParticuliers':
+      setBlocState(bloc, 'enfants', `${blocName}Caret`);
+      break;
+    case 'enfantsEntreprise':
+      setBlocState(bloc, 'enfants', `${blocName}Caret`);
+      break;
+
+    // COURS
+    case 'coursMaquilageJour':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      break;
+    case 'coursMaquilageSoiree':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      break;
+    case 'coursPersonnalise':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      break;
+    case 'coursColorimetrie':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      break;
+    case 'masterclass':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      break;
+    case 'evjf':
+      setBlocState(bloc, 'cours', `${blocName}Caret`);
       break;
     default:
       break;
@@ -314,12 +426,6 @@ const renderFullScreenPicture = (picturesGroupIndex, pictureIndex) => {
 ############################################################################ */
 
 // Auto ---------------------------------------------------
-setDocumentHeight();
 
 // Manuelle -----------------------------------------------
 setHTMLTitle(`Opale Makeup - Maquillage professionnel à domicile - Calais`);
-
-/* const header = document.getElementById('header');
-const main = document.getElementById('main');
-const footer = document.getElementById('footer'); */
-

@@ -31,10 +31,17 @@
 
     <div id="main" class="main">
 
-      <div class="main-intro-area">
-        <span class="name-intro">MATTHIEU DUQUENOY</span>
-        <span class="pro-intro">MAQUILLEUR PROFESSIONNEL</span>
-        <span class="sub-intro">EN DÉPLACEMENT SUR TOUTE LA CÔTE D'OPALE</span>
+      <div id="mainIntro" class="main-intro-area closed">
+        <button class="main-intro-header" onclick="onMainIntroClick()">
+          <span class="name-intro">MATTHIEU DUQUENOY</span>
+          <span class="pro-intro">MAQUILLEUR PROFESSIONNEL</span>
+          <span class="sub-intro">EN DÉPLACEMENT SUR TOUTE LA CÔTE D'OPALE</span>
+        </button>
+        <div class="main-intro-content">
+          <p class="main-intro">
+            Passionné par le maquillage depuis mon adolescence et diplômé d'une formation "maquillage artistique" de l'école <a style="text-decoration: none; font-weight: 300;" href="http://www.metamake-up.com/">METAMORPHOSES</a> de Strasbourg depuis 2017, je suis à votre disposition pour répondre à toutes vos questions, et satisfaire au mieux votre demande en déplacement sur la Côte d'Opale.
+        </p>
+        </div>
       </div>
 
       <!-- ==================================================================================== -->
@@ -122,6 +129,38 @@
             <button onclick="onPictureClick(2, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree.webp');"></button>
             <button onclick="onPictureClick(2, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-3.webp');"></button>
             <button onclick="onPictureClick(2, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-4.webp');"></button>
+            <button onclick="onPictureClick(2, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/soiree-5.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Évenementiel ---------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="evenementiel" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('evenementiel')">
+            <div class="prestation-header-text">
+              <span>Évenementiel</span><span>sur devis</span>
+            </div>
+            <img id="evenementielCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Tarif et durée selon la demande</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(3, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel.webp');"></button>
+            <button onclick="onPictureClick(3, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-2.webp');"></button>
+            <button onclick="onPictureClick(3, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-3.webp');"></button>
+            <button onclick="onPictureClick(3, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-4.webp');"></button>
+            <button onclick="onPictureClick(3, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-5.webp');"></button>
+            <button onclick="onPictureClick(3, 5)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-6.webp');"></button>
+            <button onclick="onPictureClick(3, 6)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-7.webp');"></button>
+            <button onclick="onPictureClick(3, 7)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-8.webp');"></button>
+            <button onclick="onPictureClick(3, 8)" class="prestation-picture" style="background-image: url('./medias/images/prestations/evenementiel-9.webp');"></button>
           </div>
         </div>
 
@@ -157,10 +196,10 @@
           <div class="description-container"><span>Teint, yeux, lèvres</span></div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(3, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel.webp');"></button>
-            <button onclick="onPictureClick(3, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-2.webp');"></button>
-            <button onclick="onPictureClick(3, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-3.webp');"></button>
-            <button onclick="onPictureClick(3, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-4.webp');"></button>
+            <button onclick="onPictureClick(4, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel.webp');"></button>
+            <button onclick="onPictureClick(4, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-2.webp');"></button>
+            <button onclick="onPictureClick(4, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-3.webp');"></button>
+            <button onclick="onPictureClick(4, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariee-naturel-4.webp');"></button>
           </div>
         </div>
 
@@ -183,11 +222,11 @@
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(4, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique.webp');"></button>
-            <button onclick="onPictureClick(4, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-2.webp');"></button>
-            <button onclick="onPictureClick(4, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-3.webp');"></button>
-            <button onclick="onPictureClick(4, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-4.webp');"></button>
-            <button onclick="onPictureClick(4, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-5.webp');"></button>
+            <button onclick="onPictureClick(5, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique.webp');"></button>
+            <button onclick="onPictureClick(5, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-2.webp');"></button>
+            <button onclick="onPictureClick(5, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-3.webp');"></button>
+            <button onclick="onPictureClick(5, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-4.webp');"></button>
+            <button onclick="onPictureClick(5, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/mariage-sophistique-5.webp');"></button>
           </div>
         </div>
 
@@ -207,13 +246,12 @@
           
           <div class="description-container">
             <span>Maquillage naturel / coiffure lâchée</span>
-            <span>+ 5€ si déco cheveux</span>
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(5, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches.webp');"></button>
-            <button onclick="onPictureClick(5, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-3.webp');"></button>
-            <button onclick="onPictureClick(5, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-5.webp');"></button>
+            <button onclick="onPictureClick(6, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches.webp');"></button>
+            <button onclick="onPictureClick(6, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-3.webp');"></button>
+            <button onclick="onPictureClick(6, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-5.webp');"></button>
           </div>
         </div>
 
@@ -233,14 +271,14 @@
           
           <div class="description-container">
             <span>Maquillage naturel / coiffure attachée</span>
-            <span>+ 5€ si déco cheveux</span>
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(6, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches.webp');"></button>
-            <button onclick="onPictureClick(6, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-5.webp');"></button>
-            <button onclick="onPictureClick(6, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-3.webp');"></button>
-            <button onclick="onPictureClick(6, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-7.webp');"></button>
+            <button onclick="onPictureClick(7, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches.webp');"></button>
+            <button onclick="onPictureClick(7, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-5.webp');"></button>
+            <button onclick="onPictureClick(7, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-3.webp');"></button>
+            <button onclick="onPictureClick(7, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-7.webp');"></button>
+            <button onclick="onPictureClick(7, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-9.webp');"></button>
           </div>
         </div>
 
@@ -260,13 +298,12 @@
           
           <div class="description-container">
             <span>Maquillage sophistiqué / coiffure lâchée</span>
-            <span>+ 5€ si déco cheveux</span>
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(7, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-2.webp');"></button>
-            <button onclick="onPictureClick(7, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-4.webp');"></button>
-            <button onclick="onPictureClick(7, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-6.webp');"></button>
+            <button onclick="onPictureClick(8, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-2.webp');"></button>
+            <button onclick="onPictureClick(8, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-4.webp');"></button>
+            <button onclick="onPictureClick(8, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/laches-6.webp');"></button>
           </div>
         </div>
 
@@ -286,14 +323,14 @@
           
           <div class="description-container">
             <span>Maquillage sophistiqué / coiffure attachée</span>
-            <span>+ 5€ si déco cheveux</span>
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(8, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-6.webp');"></button>
-            <button onclick="onPictureClick(8, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-4.webp');"></button>
-            <button onclick="onPictureClick(8, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-2.webp');"></button>
-            <button onclick="onPictureClick(8, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-8.webp');"></button>
+            <button onclick="onPictureClick(9, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-6.webp');"></button>
+            <button onclick="onPictureClick(9, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-4.webp');"></button>
+            <button onclick="onPictureClick(9, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-2.webp');"></button>
+            <button onclick="onPictureClick(9, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-8.webp');"></button>
+            <button onclick="onPictureClick(9, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/attaches-10.webp');"></button>
           </div>
         </div>
 
@@ -304,7 +341,7 @@
         <div id="invitee" class="prestation-container closed">
           <button class="prestation-header" onclick="onPrestationClick('invitee')">
             <div class="prestation-header-text">
-              <span>Maquillage naturel</span><span>29€</span>
+              <span>Maquillage invitée</span><span>29€</span>
             </div>
             <img id="inviteeCaret" src="medias/images/font-awsome/caret-down.svg" />
           </button>
@@ -316,9 +353,9 @@
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(9, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-1.webp');"></button>
-            <button onclick="onPictureClick(9, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-2.webp');"></button>
-            <button onclick="onPictureClick(9, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-3.webp');"></button>
+            <button onclick="onPictureClick(10, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-1.webp');"></button>
+            <button onclick="onPictureClick(10, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-2.webp');"></button>
+            <button onclick="onPictureClick(10, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/maquillage-invites-3.webp');"></button>
           </div>
         </div>
 
@@ -341,10 +378,55 @@
           </div>
 
           <div class="images-container">
-            <button onclick="onPictureClick(10, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-1.webp');"></button>
-            <button onclick="onPictureClick(10, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-2.webp');"></button>
+            <button onclick="onPictureClick(11, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-1.webp');"></button>
+            <button onclick="onPictureClick(11, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-2.webp');"></button>
+            <button onclick="onPictureClick(11, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-3.webp');"></button>
+            <button onclick="onPictureClick(11, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-4.webp');"></button>
+            <button onclick="onPictureClick(11, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/coiffure-invites-5.webp');"></button>
           </div>
         </div>
+
+      </div>
+
+      <!-- ==================================================================================== -->
+      <!-- -------------------------------------- Mains --------------------------------------- -->
+      <!-- ==================================================================================== -->
+
+      <div id="mains" class="prestation-group-container closed">
+
+        <!-- --------------------------- HEADER --------------------------- -->
+
+        <button id="mains-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('mains')">
+          <div class="group-name-container">
+            <span>Mains</span>
+            <img id="mainsCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+
+        <div>content</div>
+
+      </div>
+
+      <!-- ==================================================================================== -->
+      <!-- -------------------------------------- Epilation --------------------------------------- -->
+      <!-- ==================================================================================== -->
+
+      <div id="epilation" class="prestation-group-container closed">
+
+        <!-- --------------------------- HEADER --------------------------- -->
+
+        <button id="epilation-bloc-header" class="prestation-group-header" onclick="onPrestationGroupClick('epilation')">
+          <div class="group-name-container">
+            <span>Épilation</span>
+            <img id="epilationCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </div>
+        </button>
+
+        <!-- ------------------------ PRESTATIONS ------------------------- -->
+
+        <div>content</div>
 
       </div>
 
@@ -365,7 +447,68 @@
 
         <!-- ------------------------ PRESTATIONS ------------------------- -->
 
-        <div>content</div>
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Maquillage (Particuliers) --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="enfantsParticuliers" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('enfantsParticuliers')">
+            <div class="prestation-header-text">
+              <span>Maquillage<br>(Particuliers)</span><span>sur devis</span>
+            </div>
+            <img id="enfantsParticuliersCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Maquillage d'environ 15min</span>
+            <span>3 enfants minimum, 8€/enfant</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(12, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants.webp');"></button>
+            <button onclick="onPictureClick(12, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-2.webp');"></button>
+            <button onclick="onPictureClick(12, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-3.webp');"></button>
+            <button onclick="onPictureClick(12, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-4.webp');"></button>
+            <button onclick="onPictureClick(12, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-5.webp');"></button>
+            <button onclick="onPictureClick(12, 5)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-6.webp');"></button>
+            <button onclick="onPictureClick(12, 6)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-7.webp');"></button>
+            <button onclick="onPictureClick(12, 7)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-8.webp');"></button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Maquillage (Entreprise) --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="enfantsEntreprise" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('enfantsEntreprise')">
+            <div class="prestation-header-text">
+              <span>Maquillage<br>(Entreprise)</span><span>sur devis</span>
+            </div>
+            <img id="enfantsEntrepriseCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Forfait à l'heure (2h minimum, 55€/heure)</span>
+            <span>Déplacement (hors Calais) : 0,35€/km</span>
+          </div>
+
+          <div class="images-container">
+            <button onclick="onPictureClick(13, 0)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-9.webp');"></button>
+            <button onclick="onPictureClick(13, 1)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-10.webp');"></button>
+            <button onclick="onPictureClick(13, 2)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-11.webp');"></button>
+            <button onclick="onPictureClick(13, 3)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-12.webp');"></button>
+            <button onclick="onPictureClick(13, 4)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-13.webp');"></button>
+            <button onclick="onPictureClick(13, 5)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-14.webp');"></button>
+            <button onclick="onPictureClick(13, 6)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-15.webp');"></button>
+            <button onclick="onPictureClick(13, 7)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-16.webp');"></button>
+            <button onclick="onPictureClick(13, 8)" class="prestation-picture" style="background-image: url('./medias/images/prestations/enfants-17.webp');"></button>
+          </div>
+        </div>
 
       </div>
 
@@ -386,9 +529,145 @@
 
         <!-- ------------------------ PRESTATIONS ------------------------- -->
 
-        <div>content</div>
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Cours Maquillage Jour --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="coursMaquilageJour" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('coursMaquilageJour')">
+            <div class="prestation-header-text">
+              <span>Cours maquillage jour<br>(Individuel ou collectif)</span><span>35€<span>/pers.</span></span>
+            </div>
+            <img id="coursMaquilageJourCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Techniques de base du maquillage</span>
+            <span>(Avec votre propre matériel)</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Cours Maquillage Soirée --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="coursMaquilageSoiree" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('coursMaquilageSoiree')">
+            <div class="prestation-header-text">
+              <span>Cours maquillage soirée<br>(Individuel ou collectif)</span><span>40€<span>/pers.</span></span>
+            </div>
+            <img id="coursMaquilageSoireeCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Centré sur un maquillage plus sophistiqué</span>
+            <span>(Avec votre propre matériel)</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Cours Personnalisé --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="coursPersonnalise" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('coursPersonnalise')">
+            <div class="prestation-header-text">
+              <span>Cours personnalisé<br>(Individuel ou collectif)</span><span>sur devis</span>
+            </div>
+            <img id="coursPersonnaliseCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>En fonction de vos besoins (ex: gala)</span>
+            <span>(Avec votre propre matériel)</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Cours de Colorimétrie --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="coursColorimetrie" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('coursColorimetrie')">
+            <div class="prestation-header-text">
+              <span>Cours de colorimétrie<br>(Individuel ou collectif)</span><span>50€<span>/pers.</span></span>
+            </div>
+            <img id="coursColorimetrieCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Découvrir sa palette de couleurs et comment associer maquillage, bijoux et vêtements</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- Masterclass --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="masterclass" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('masterclass')">
+            <div class="prestation-header-text">
+              <span>Masterclass<br>(Individuel ou collectif)</span><span>25€<span>/pers.</span></span>
+            </div>
+            <img id="masterclassCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Présentation des techniques pour sublimer le regard</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- --------------------- EVJF --------------------- -->
+        <!-- -------------------------------------------------------------- -->
+
+        <div id="evjf" class="prestation-container closed">
+          <button class="prestation-header" onclick="onPrestationClick('evjf')">
+            <div class="prestation-header-text">
+              <span>E.V.J.F.</span><span>sur devis</span>
+            </div>
+            <img id="evjfCaret" src="medias/images/font-awsome/caret-down.svg" />
+          </button>
+
+          <div class="separator"></div>
+          
+          <div class="description-container">
+            <span>Cours au choix - 8 personnes minimum</span>
+            <span>(Collaboration possible avec une <a href="https://www.facebook.com/profile.php?id=100077311025019">conseillère Victoria Bijoux</a>)</span>
+          </div>
+
+          <div class="images-container">
+          </div>
+        </div>
 
       </div>
+
+      
 
       <div class="ghost-footer"></div>
     </div>

@@ -35,11 +35,6 @@ export const isLaptop = window.innerWidth > BREAKPOINTS.TABLET_MAX_WIDTH && wind
 export const isLaptopOrUp = window.innerWidth > BREAKPOINTS.TABLET_MAX_WIDTH
 export const isDesktop = window.innerWidth > BREAKPOINTS.LAPTOP_MAX_WIDTH
 
-export const setDocumentHeight = () => {
-  document.documentElement.style.setProperty('--doc-height', `${window.innerHeight}px`)
-}
-window.addEventListener('resize', setDocumentHeight);
-
 export const setHTMLTitle = (pageTitle) => {
   document.getElementById('title').innerHTML = pageTitle;
   document.getElementById('appleTitle').setAttribute('content', pageTitle);

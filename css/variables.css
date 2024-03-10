@@ -45,7 +45,7 @@
     /* Font colors */
     --font-color-default: var(--gray-20);
 
-    --font-color-links: var(--gray-80);
+    --font-color-links: var(--palette-1);
 
     --font-color-header: var(--on-primary);
     --font-color-header-hover: var(--on-primary);
@@ -65,31 +65,29 @@
     --------------------------------- HEIGHTS ---------------------------------
     ------------------------------------------------------------------------ */
 
-    --doc-height: 100%;
-
     /* --------------------------- header height --------------------------- */
-    --phone-header-height: 11%;
-    --tablet-header-height: 11%;
-    --laptop-header-height: 11%;
-    --desktop-header-height: 11%;
+    --phone-header-height: 11dvh;
+    --tablet-header-height: 11dvh;
+    --laptop-header-height: 11dvh;
+    --desktop-header-height: 11dvh;
     /* --------------------------------------------------------------------- */
     --header-height: var(--phone-header-height);
     /* --------------------------------------------------------------------- */
 
     /* ---------------------------- main height ---------------------------- */
-    --phone-main-height: 82%;
-    --tablet-main-height: 82%;
-    --laptop-main-height: 82%;
-    --desktop-main-height: 82%;
+    --phone-main-height: 82dvh;
+    --tablet-main-height: 82dvh;
+    --laptop-main-height: 82dvh;
+    --desktop-main-height: 82dvh;
     /* --------------------------------------------------------------------- */
     --main-height: var(--phone-main-height);
     /* --------------------------------------------------------------------- */
 
     /* --------------------------- footer height --------------------------- */
-    --phone-footer-height: 7%;
-    --tablet-footer-height: 7%;
-    --laptop-footer-height: 7%;
-    --desktop-footer-height: 7%;
+    --phone-footer-height: 7dvh;
+    --tablet-footer-height: 7dvh;
+    --laptop-footer-height: 7dvh;
+    --desktop-footer-height: 7dvh;
     /* --------------------------------------------------------------------- */
     --footer-height: var(--phone-footer-height);
     /* --------------------------------------------------------------------- */
