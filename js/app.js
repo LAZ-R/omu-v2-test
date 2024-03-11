@@ -120,10 +120,14 @@ const onPrestationGroupClick = (blocName) => {
   
   const setBlocState = (bloc, opened, closed, caretName) => {
     const caret = document.getElementById(caretName);
+
     if (bloc.classList.contains('closed')) { 
       bloc.classList.replace('closed', 'opened');
       setPrestationGroupBlocHeight(bloc, opened, closed);
       caret.style.transform = 'rotate(180deg)';
+      setTimeout(() => {
+        bloc.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+      }, 200);
     } else { 
       bloc.classList.replace('opened', 'closed'); 
       setPrestationGroupBlocHeight(bloc, 0, 0);
@@ -156,6 +160,14 @@ const onPrestationGroupClick = (blocName) => {
     default:
       break;
   }
+
+  /* document.getElementById('main').scrollTo({
+    top: 100,
+    left: 100,
+    behavior: "smooth",
+  }); */
+
+  //
 }
 window.onPrestationGroupClick = onPrestationGroupClick;
 
