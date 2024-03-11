@@ -9,10 +9,10 @@ let maquillagesOpened = 0;
 let mariagesClosed = 8;
 let mariagesOpened = 0;
 
-let mainsClosed = 3;
+let mainsClosed = 11;
 let mainsOpened = 0;
 
-let epilationClosed = 3;
+let epilationClosed = 6;
 let epilationOpened = 0;
 
 let enfantsClosed = 2;
@@ -318,12 +318,57 @@ const onPrestationClick = (blocName) => {
       break;
     
     // MAINS
-    case 'mains1':
+    case 'semiPermanent':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'semiPermanentFrench':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'forfaitSemiPermanent':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'forfaitFrench':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'capsules':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'capsulesCouleurUnie':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'capsulesFrench':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'depose':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'decoration':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'soinSimple':
+      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      break;
+    case 'soinComplet':
       setBlocState(bloc, 'mains', `${blocName}Caret`);
       break;
     
     // EPILATION
-    case 'epilation1':
+    case 'levreSuperieure':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    case 'menton':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    case 'sourcils':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    case 'forfaitx2':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    case 'forfaitx3':
+      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      break;
+    case 'coursSourcils':
       setBlocState(bloc, 'epilation', `${blocName}Caret`);
       break;
     
