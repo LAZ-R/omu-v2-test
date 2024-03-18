@@ -116,7 +116,7 @@ const onMainIntroClick = () => {
 }
 window.onMainIntroClick = onMainIntroClick;
 
-const onPrestationGroupClick = (blocName) => {
+const onPrestationGroupClick = (blocId) => {
   
   const setBlocState = (bloc, opened, closed, caretName) => {
     const caret = document.getElementById(caretName);
@@ -135,9 +135,9 @@ const onPrestationGroupClick = (blocName) => {
     }
   }
 
-  const bloc = document.getElementById(blocName);
+  const bloc = document.getElementById(blocId);
 
-  switch (blocName) {
+  switch (blocId) {
     case 'maquillages':
       setBlocState(bloc,maquillagesOpened, maquillagesClosed, 'maquillagesCaret');
       break;
@@ -171,11 +171,11 @@ const onPrestationGroupClick = (blocName) => {
 }
 window.onPrestationGroupClick = onPrestationGroupClick;
 
-const onPrestationClick = (blocName) => {
+const onPrestationClick = (blocId) => {
 
-  const setBlocState = (bloc, parentBlocName, caretName) => {
+  const setBlocState = (bloc, parentBlocId, caretName) => {
     const caret = document.getElementById(caretName);
-      switch (parentBlocName) {
+      switch (parentBlocId) {
         case 'maquillages':
           if (bloc.classList.contains('closed')) { 
             bloc.classList.replace('closed', 'opened');
@@ -187,7 +187,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             maquillagesOpened, 
             maquillagesClosed);
           break;
@@ -203,7 +203,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             mariagesOpened, 
             mariagesClosed);
           break;
@@ -219,7 +219,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             mainsOpened, 
             mainsClosed);
           break;
@@ -234,7 +234,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             epilationOpened, 
             epilationClosed);
           break;
@@ -249,7 +249,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             enfantsOpened, 
             enfantsClosed);
           break;
@@ -265,7 +265,7 @@ const onPrestationClick = (blocName) => {
             caret.style.transform = 'rotate(0deg)';
           }
           setPrestationGroupBlocHeight(
-            document.getElementById(parentBlocName), 
+            document.getElementById(parentBlocId), 
             coursOpened, 
             coursClosed);
           break;
@@ -274,130 +274,130 @@ const onPrestationClick = (blocName) => {
       }
     } 
   
-  const bloc = document.getElementById(blocName);
+  const bloc = document.getElementById(blocId);
 
-  switch (blocName) {
+  switch (blocId) {
     // MAQUILLAGES
     case 'maquillageJourNaturel':
-      setBlocState(bloc, 'maquillages', `${blocName}Caret`);
+      setBlocState(bloc, 'maquillages', `${blocId}Caret`);
       break;
     case 'maquillageJourSophistique':
-      setBlocState(bloc, 'maquillages', `${blocName}Caret`);
+      setBlocState(bloc, 'maquillages', `${blocId}Caret`);
       break;
     case 'maquillageSoiree':
-      setBlocState(bloc, 'maquillages', `${blocName}Caret`);
+      setBlocState(bloc, 'maquillages', `${blocId}Caret`);
       break;
     case 'evenementiel':
-      setBlocState(bloc, 'maquillages', `${blocName}Caret`);
+      setBlocState(bloc, 'maquillages', `${blocId}Caret`);
       break;
 
     // MARIAGES
     case 'marieeNaturel':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'marieeSophistique':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'marieeNaturelLache':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'marieeNaturelAttache':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'marieeSophistiqueLache':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'marieeSophistiqueAttache':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'invitee':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     case 'forfaitInvitee':
-      setBlocState(bloc, 'mariages', `${blocName}Caret`);
+      setBlocState(bloc, 'mariages', `${blocId}Caret`);
       break;
     
     // MAINS
     case 'semiPermanent':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'semiPermanentFrench':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'forfaitSemiPermanent':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'forfaitFrench':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'capsules':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'capsulesCouleurUnie':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'capsulesFrench':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'depose':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'decoration':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'soinSimple':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     case 'soinComplet':
-      setBlocState(bloc, 'mains', `${blocName}Caret`);
+      setBlocState(bloc, 'mains', `${blocId}Caret`);
       break;
     
     // EPILATION
     case 'levreSuperieure':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     case 'menton':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     case 'sourcils':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     case 'forfaitx2':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     case 'forfaitx3':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     case 'coursSourcils':
-      setBlocState(bloc, 'epilation', `${blocName}Caret`);
+      setBlocState(bloc, 'epilation', `${blocId}Caret`);
       break;
     
     // ENFANTS
     case 'enfantsParticuliers':
-      setBlocState(bloc, 'enfants', `${blocName}Caret`);
+      setBlocState(bloc, 'enfants', `${blocId}Caret`);
       break;
     case 'enfantsEntreprise':
-      setBlocState(bloc, 'enfants', `${blocName}Caret`);
+      setBlocState(bloc, 'enfants', `${blocId}Caret`);
       break;
 
     // COURS
     case 'coursMaquilageJour':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     case 'coursMaquilageSoiree':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     case 'coursPersonnalise':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     case 'coursColorimetrie':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     case 'masterclass':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     case 'evjf':
-      setBlocState(bloc, 'cours', `${blocName}Caret`);
+      setBlocState(bloc, 'cours', `${blocId}Caret`);
       break;
     default:
       break;
