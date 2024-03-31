@@ -73,6 +73,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
+
+    @media screen and (min-width: 600px) {
+        padding: 0 calc(var(--horizontal-padding) * 2);  
+    }
 }
 
 .footer {
@@ -307,6 +311,10 @@ input:checked + .slider:before {
             letter-spacing: 2px;
             color: white;
         }
+
+        @media screen and (min-width: 600px) {
+            padding: 0 calc(var(--horizontal-padding) / 3);  
+        }
     }
 
     & .main-intro-content {
@@ -325,6 +333,10 @@ input:checked + .slider:before {
             font-weight: 100;
             font-size: 14px;
             margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 600px) {
+            padding: 0 calc(var(--horizontal-padding) / 3);  
         }
     }
 
@@ -360,8 +372,8 @@ input:checked + .slider:before {
 
         &#maquillages-bloc-header { background-image: url("../medias/images/maquillages.jpg"); background-position: center; background-size: cover; }
         &#mariages-bloc-header { background-image: url("../medias/images/mariages.jpg"); background-position: center; background-size: cover; }
-        &#mains-bloc-header { background-image: url("https://orelka.com/cdn/shop/products/vernis-soin-2-en-1-prune-Maia-OrelKa1_2048x.jpg?v=1697550188"); background-position: center; background-size: cover; }
-        &#epilation-bloc-header { background-image: url("https://img.passeportsante.net/1200x675/2022-06-07/shutterstock-1795300762.webp"); background-position: center; background-size: cover; }
+        &#mains-bloc-header { background-image: url("../medias/images/ongles.jpg"); background-position: center; background-size: cover; }
+        &#epilation-bloc-header { background-image: url("../medias/images/epilation.jpg"); background-position: center; background-size: cover; }
         &#enfants-bloc-header { background-image: url("../medias/images/enfants.jpg"); background-position: center; background-size: cover; }
         &#cours-bloc-header { background-image: url("../medias/images/cours.jpg"); background-position: center; background-size: cover; }
 
@@ -387,6 +399,10 @@ input:checked + .slider:before {
                 filter: var(--filter-white);
                 transition: transform .2s linear;
             }
+
+            @media screen and (min-width: 600px) {
+                padding: 0 calc(var(--horizontal-padding) / 3);  
+            }
         }
     }
 }
@@ -408,6 +424,10 @@ input:checked + .slider:before {
     }
     &.opened {
         min-height: var(--presta-height); height: var(--presta-height);
+    }
+
+    @media screen and (min-width: 600px) {
+        width: 100%;
     }
 
     & .prestation-header {
@@ -441,6 +461,14 @@ input:checked + .slider:before {
                     font-size: 12px;
                 }
             }
+
+            @media screen and (min-width: 600px) {
+                padding-right: 40px;  
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            padding: 0 calc(var(--horizontal-padding) / 3);  
         }
 
 
@@ -467,6 +495,10 @@ input:checked + .slider:before {
         padding: 5px var(--horizontal-padding);
         min-height: 44px; height: 44px; max-height: 44px;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 600px) {
+            padding: 5px calc(var(--horizontal-padding) / 3);  
+        }
     }
 
     & .images-container {
@@ -598,6 +630,10 @@ input:checked + .slider:before {
         right: 0;
         padding: var(--horizontal-padding);
         background-color: transparent;
+
+        @media screen and (min-width: 600px) {
+            padding: calc(var(--horizontal-padding) / 3);  
+        }
 
         & img {
             transform: rotate(45deg);
