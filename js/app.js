@@ -33,10 +33,10 @@ const PRESTATIONS_PICTURES = [
   [ 'jour-sophistique', 'jour-sophistique-2', 'jour-sophistique-3', 'jour-sophistique-4' ],
   
   //  2 - soiree
-  [ 'soiree-2', 'soiree', 'soiree-3', 'soiree-4', 'soiree-5' ],
+  [ 'soiree-2', 'soiree', 'soiree-3', 'soiree-4', 'soiree-5', 'soiree-6' ],
 
   //  3 - evenementiel
-  ['evenementiel', 'evenementiel-2', 'evenementiel-3', 'evenementiel-4', 'evenementiel-5', 'evenementiel-6', 'evenementiel-7', 'evenementiel-8', 'evenementiel-9'],
+  ['evenementiel', 'evenementiel-2', 'evenementiel-3', 'evenementiel-5', 'evenementiel-6', 'evenementiel-7', 'evenementiel-8', 'evenementiel-9'],
 
   // Mariages ---------------------------------------------
 
@@ -59,7 +59,7 @@ const PRESTATIONS_PICTURES = [
   ['attaches-6', 'attaches-4', 'attaches-2', 'attaches-8', 'attaches-10'],
   
   // 10 - invitee
-  ['maquillage-invites-1', 'maquillage-invites-2', 'maquillage-invites-3'],
+  ['maquillage-invites-1', 'maquillage-invites-2', 'maquillage-invites-3', 'maquillage-invites-4', 'maquillage-invites-5'],
   
   // 11 - forfaitInvitee
   ['coiffure-invites-1', 'coiffure-invites-2', 'coiffure-invites-3', 'coiffure-invites-4', 'coiffure-invites-5'],
